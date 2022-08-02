@@ -14,5 +14,12 @@
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 <h2>System Desrciption</h2>
-
+<p>
+    This attendance monitoring system is used to monitor the attendance and movement of employees of <b>LGU-GenSan</b> within their working hours.
+</p>
+<p>
+    Using the attendance system will reduce the number of errors that occur when processing attendance data, better utilize the working hours by improving
+    employees' personal approaches to work duties, and monitor overtimes.
+</p>    
+    
 <hr>    
