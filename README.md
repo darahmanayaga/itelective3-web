@@ -13,7 +13,7 @@
 ![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-<h2>System Desrciption</h2>
+<h2>System Description</h2>
 <p>
     This attendance monitoring system is used to monitor the attendance and movement of employees of <b>LGU-GenSan</b> within their working hours.
 </p>
