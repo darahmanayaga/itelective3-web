@@ -20,6 +20,12 @@
 <p>
     Using the attendance system will reduce the number of errors that occur when processing attendance data, better utilize the working hours by improving
     employees' personal approaches to work duties, and monitor overtimes.
+</p>
+
+<h2>Use Case Diagram</h2>
+<p align="center">
+    <img src="https://i.pinimg.com/originals/2d/b3/9d/2db39d2905e11893721f0f28c6f17ae9.png">
 </p>    
-    
+
+
 <hr>    
