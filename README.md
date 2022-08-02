@@ -25,7 +25,11 @@
 <h2>Use Case Diagram</h2>
 <p align="center">
     <img src="https://i.pinimg.com/originals/2d/b3/9d/2db39d2905e11893721f0f28c6f17ae9.png" width="700" Height="800">
-</p>    
+</p>
+
+<h2>Possible Subsystems</h2>
+* Time-in and time-out monitoring system
+* Overtime tracker
 
 
 <hr>    
