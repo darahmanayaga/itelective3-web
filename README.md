@@ -7,5 +7,5 @@
 </p>
 
 <p>Stacks used:
-    <p><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_plain_wordmark_logo_icon_146423.png" alt="description" width="100" height="48" /></p>
+    <p><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_plain_wordmark_logo_icon_146423.png" alt="description" width="100" height="100" /></p>
 </p>
