@@ -28,8 +28,10 @@
 </p>
 
 <h2>Possible Subsystems</h2>
-* Time-in and time-out monitoring system
-* Overtime tracker
+<ul>
+  <li>Overtime tracker</li>
+  <li>Time-in and time-out monitoring system</li>
+</ul>
 
 
 <hr>    
