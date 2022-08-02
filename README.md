@@ -6,5 +6,6 @@
     <img src="https://www.gensancemcdo.org/wp-content/uploads/2020/07/Gensan_logo_new-removebg-preview-removebg-preview.png" width="200" height="200">
 </p>
 
-<p>Stacks used:</p>
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+<p>Stacks used:
+    ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+</p>
