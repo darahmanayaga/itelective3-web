@@ -31,4 +31,4 @@
 <ul>
   <li>Overtime tracker</li>
   <li>Time-in and time-out monitoring system</li>
-</ul>
+</ul
