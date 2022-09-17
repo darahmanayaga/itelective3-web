@@ -1,0 +1,30 @@
+{
+  "name": "itelective3-web",
+  "version": "1.0.0",
+  "description": "My first weather nodeapp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darahmanayaga/itelective3-web.git"
+  },
+  "keywords": [
+    "node-app",
+    "express-JS",
+    "EJS",
+    "Weather-JS"
+  ],
+  "author": "Darah Manayaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darahmanayaga/itelective3-web/issues"
+  },
+  "homepage": "https://github.com/darahmanayaga/itelective3-web#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "weather-js": "^2.0.0"
+  }
+}
