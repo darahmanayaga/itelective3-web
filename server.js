@@ -3,7 +3,7 @@ const app = express();
 console.log(__dirname);
 
 app.get('/', function (req, res) {
-  res.sendFile('/views/index.html', {root: __dirname});
+  res.sendFile('/views/index.ejs', {root: __dirname});
 });
 
 app.listen(3000);
