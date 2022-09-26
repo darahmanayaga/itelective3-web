@@ -8,7 +8,7 @@
   <title>Home</title>
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
 </head>
-<body>  
+<body class="bg-stone-200">  
 
 
   <nav class="border-gray-200 px-2 sm:px-4 py-2.5 bg-gray-600">
@@ -34,23 +34,27 @@
     </div>
   </nav>
 
-  <div class="place-content-center">
-    <img src="https://www.svgrepo.com/show/248881/philippines.svg" style="height:200px; width:300px"/>
-  </div>
-    
+  <body>
+    <ffigure class="max-w-lg">
+      <div class="place-content-center">
+        <img class="mx-auto max-w-lg h-auto" src="https://www.svgrepo.com/show/248881/philippines.svg" style="height:200px; width:300px">
+      </div>    
+      <figcaption class="mt-2 text-sm text-center text-3xl text-gray-900"><b><%= weather [0]['location']['name'] %></b></figcaption>
+      <figcaption class="mt-2 text-sm text-center text-xl text-gray-900">
+        <%= weather [0]['location']['lat']+"°," %>
+        <%= weather [0]['location']['long']+"° E" %>
+      </figcaption>
+    </figure>
+  </body>
+
+  <body>
+    <p>
+      <% let icon = (weather[0]['forecast'][0]['skycode']); %>
+      <img src= <%= ("https://blob.weather.microsoft.com/static/weather4/en-us/law/"+icon+".gif"); %>>
+    </p>
+  </body>
 
   <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
-  <!--body>
-    <p>
-      <%= weather [0]['location']['name'] %>
-    </p>
-    <p>
-      <%= weather [0]['location']['lat'] %>
-    </p>
-    <p>
-      <%= weather [0]['location']['long'] %>
-    </p>
-  </body-->
 </body>
 </html>
