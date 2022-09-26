@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 
   weather.find({search: 'Davao City, PH', degreeType: 'C'}, function(err, result) {
     var weather_data = null;
-    if(err) console.log(concat(err,'° N'));
+    if(err) console.log(concat(err));
     else{
         weather_data = result;
 
