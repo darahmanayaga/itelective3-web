@@ -47,7 +47,7 @@
     </figure>
   </body>
 
-  <div class="flex justify-center flex space-x-20 space-y-4">
+  <div class="flex justify-center flex space-x-24">
     <div><img src="http://blob.weather.microsoft.com/static/weather4/en-us/law/<%= weather[0]['current']['skycode'] %>.gif" style="width:150px"></div>
     <div><img src="http://blob.weather.microsoft.com/static/weather4/en-us/law/<%= weather[0]['forecast'][0]['skycodeday'] %>.gif" style="width:150px"></div>
     <div><img src="http://blob.weather.microsoft.com/static/weather4/en-us/law/<%= weather[0]['forecast'][1]['skycodeday'] %>.gif" style="width:150px"></div>
@@ -59,28 +59,33 @@
   <div class="flex justify-center flex space-x-40 flex">
     <div>
       <b><p><center>Today</center></p></b>
-      <p><%= weather[0]['current']['date'] %></p>
-      <p><center><%= weather[0]['current']['temperature']+"°"%></center></p>
+      <p><center><%= weather[0]['current']['date'] %></center></p>
+      <p><center><%= weather[0]['current']['skytext'] %></center></p>
     </div>
     <div>
       <b><p><center><%= weather[0]['forecast'][0]['day'] %></center></p></b>
-      <p><%= weather[0]['forecast'][0]['date'] %></p>
+      <p><center><%= weather[0]['forecast'][0]['date'] %></center></p>
+      <p><center><%= weather[0]['forecast'][0]['skytextday'] %></center></p>
     </div>
     <div>
       <b><p><center><%= weather[0]['forecast'][1]['day'] %></center></p></b>
-      <p><%= weather[0]['forecast'][1]['date'] %></p>
+      <p><center><%= weather[0]['forecast'][1]['date'] %></center></p>
+      <p><center><%= weather[0]['forecast'][1]['skytextday'] %></center></p>
     </div>
     <div>
       <b><p><center><%= weather[0]['forecast'][2]['day'] %></center></p></b>
-      <p><%= weather[0]['forecast'][2]['date'] %></p>
+      <p><center><%= weather[0]['forecast'][2]['date'] %></center></p>
+      <p><center><%= weather[0]['forecast'][2]['skytextday'] %></center></p>
     </div>
     <div>
       <b><p><center><%= weather[0]['forecast'][3]['day'] %></center></p></b>
-      <p><%= weather[0]['forecast'][3]['date'] %></p>
+      <p><center><%= weather[0]['forecast'][3]['date'] %></center></p>
+      <p><center><%= weather[0]['forecast'][3]['skytextday'] %></center></p>
     </div>
     <div>
       <b><p><center><%= weather[0]['forecast'][4]['day'] %></center></p></b>
-      <p><%= weather[0]['forecast'][4]['date'] %></p>
+      <p><center><%= weather[0]['forecast'][4]['date'] %></center></p>
+      <p><center><%= weather[0]['forecast'][4]['skytextday'] %></center></p>
     </div>
   </div>
 
