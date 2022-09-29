@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
-    <title>Other API</title>
+    <title>Cats</title>
 </head>
 <body class="bg-stone-200">
 
     <nav class="border-gray-200 px-2 sm:px-4 py-2.5 bg-gray-600">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <a href="https://flowbite.com/" class="flex items-center">
-              <img src="https://img.icons8.com/fluency/344/weather-forecast.png" class="mr-3 h-6 sm:h-9" style="width:80px; height:80px; position:relative; left:70px"/>
-              <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue-50" style="position:relative; left:70px"><b>Name of API</b></span>
+              <img src="https://www.svgrepo.com/show/38433/cat.svg" class="mr-3 h-6 sm:h-9" style="width:80px; height:80px; position:relative; left:70px"/>
+              <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue-50" style="position:relative; left:70px"><b>Cats</b></span>
           </a>
           <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-blue-50 md:hidden hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200 hover:bg-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -32,6 +32,47 @@
           </div>
         </div>
       </nav>
+      
+      <div class="flex flex-wrap">
+        <div class="mt-7 ml-7">
+            <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="<%= itemData[0]['image']['url'] %>" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><%= itemData[0]['name']%></h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= itemData[0]['description']%></p>
+                </div>
+            </a>
+          </div>
+          <div class="mt-7 ml-7">
+            <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="<%= itemData[1]['image']['url'] %>" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><%= itemData[1]['name']%></h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= itemData[1]['description']%></p>
+                </div>
+            </a>
+          </div>
+          <div class="mt-7 ml-7">
+            <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="<%= itemData[2]['image']['url'] %>" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><%= itemData[2]['name']%></h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= itemData[2]['description']%></p>
+                </div>
+            </a>
+          </div>
+          <div class="mt-7 ml-7">
+            <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="<%= itemData[4]['image']['url'] %>" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><%= itemData[4]['name']%></h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= itemData[4]['description']%></p>
+                </div>
+            </a>
+          </div>
+      </div>
+
+
 
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 console.log(__dirname);
 var weather = require('weather-js');
+var fetchUrl = require("fetch").fetchUrl;
 
 app.set('view engine', 'ejs');
 
@@ -21,8 +22,19 @@ app.get('/', function (req, res) {
 
 
 app.get('/other', function (req, res) {
-  res.render('other');
+  // http://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian
+
+  fetchUrl("https://api.thecatapi.com/v1/breeds", function(error, meta, body) {
+    var cats = JSON.parse(body);
+    var data = {
+      url: req.url,
+      itemData: cats
+    }
+    res.render('other', data);
+  });
+
 });
+
 
 app.use((req,res) => {
   res.render('404');
