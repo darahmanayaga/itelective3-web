@@ -19,7 +19,12 @@
   "homepage": "https://github.com/darahmanayaga/itelective3-web#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "firebase-admin": "^11.2.0"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
   },
   "devDependencies": {
     "tailwindcss": "^3.2.1"

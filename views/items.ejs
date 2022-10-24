@@ -5,6 +5,10 @@
     <%- include('../partials/header.ejs') %>
 </head>
 <body style="background-color:#F5F2EA">
+
+    <% for(var index=0; index < itemData.length; index++){ %>
+        <h5><%= itemData[index].data()['name'] %></h5>
+    <% } %>
     
     <%- include('../partials/footer.ejs') %>
 
