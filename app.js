@@ -9,4 +9,11 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
     res.render('index');
-})
+});
+
+app.get('/items', async function(req, res) {
+    let data = {
+        url: req.url
+    }
+    res.render('items', data);
+});
