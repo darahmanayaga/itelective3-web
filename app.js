@@ -29,7 +29,6 @@ app.get('/', function(req, res) {
 
 app.get('/items', async function(req, res) {
     const items = await itemColl.get();
-    console.log(items.docs.length);
     let data = {
         url: req.url,
         itemData: items.docs,
