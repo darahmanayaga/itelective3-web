@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Products</title>
     <%- include('../partials/header.ejs') %>
 </head>
 <body style="background-color:#F5F2EA">
 
     <% for(var index=0; index < itemData.length; index++){ %>
-        <h5><%= itemData[index].data()['name'] %></h5>
+        <div class="place-content-center">
+            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+                <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:w-52">
+                    <a href="#">
+                        <img class="rounded-t-lg" src="<%= itemData[index].data()['imageURL'] %>" />
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><%= itemData[index].data()['name'] %></h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= itemData[index].data()['description'] %></p>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">₱<%= itemData[index].data()['price'] %>.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>   
     <% } %>
     
     <%- include('../partials/footer.ejs') %>
