@@ -35,14 +35,14 @@ app.get('/items', async function(req, res) {
     res.render('items', data);
 });
 
-app.get('/itempage/:itemid', async function (req, res) {
+app.get('/item/:itemid', async function (req, res) {
     try {
         console.log(req.params.itemid);
 
     } catch (e) {
     }
     const item_id = req.params.itemid;
-    const item_ref = ingColl.doc(item_id);
+    const item_ref = itemColl.doc(item_id);
     const doc = await item_ref.get();
     if (!doc.exists) {
         console.log('No such document!');
