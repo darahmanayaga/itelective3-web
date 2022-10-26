@@ -19,7 +19,6 @@ fs.initializeApp({
     credential: fs.credential.cert(serviceAccount)
 });
 
-
 const db = fs.firestore();
 const itemColl = db.collection('items');
 
@@ -34,4 +33,26 @@ app.get('/items', async function(req, res) {
         itemData: items.docs,
     }
     res.render('items', data);
+});
+
+app.get('/itempage/:itemid', async function (req, res) {
+    try {
+        console.log(req.params.itemid);
+
+    } catch (e) {
+    }
+    const item_id = req.params.itemid;
+    const item_ref = ingColl.doc(item_id);
+    const doc = await item_ref.get();
+    if (!doc.exists) {
+        console.log('No such document!');
+    } else {
+        console.log('Document data:', doc.data());
+    }
+    // const items = await ingColl.get();
+    let data = {
+        url: req.url,
+        itemData: doc.data(),
+    }
+    res.render('itempage', data);
 });
