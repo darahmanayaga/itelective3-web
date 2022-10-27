@@ -44,6 +44,7 @@ app.get('/itempage/:itemid', async function (req, res) {
     const item_id = req.params.itemid;
     const item_ref = itemColl.doc(item_id);
     const doc = await item_ref.get();
+
     if (!doc.exists) {
         console.log('No such document!');
     } else {
@@ -59,4 +60,4 @@ app.get('/itempage/:itemid', async function (req, res) {
 
 app.use((req,res) => {
     res.render('404');
-  });
+});
