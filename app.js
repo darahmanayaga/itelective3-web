@@ -35,7 +35,7 @@ app.get('/items', async function(req, res) {
     res.render('items', data);
 });
 
-app.get('/item/:itemid', async function (req, res) {
+app.get('/itempage/:itemid', async function (req, res) {
     try {
         console.log(req.params.itemid);
 
@@ -56,3 +56,7 @@ app.get('/item/:itemid', async function (req, res) {
     }
     res.render('itempage', data);
 });
+
+app.use((req,res) => {
+    res.render('404');
+  });
