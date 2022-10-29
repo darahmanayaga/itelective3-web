@@ -23,8 +23,8 @@
     "firebase-admin": "^11.2.0"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "8.x"
+    "node": "v16.16.0",
+    "npm": "8.19.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.2.1"
