@@ -85,61 +85,6 @@
             </script>
         </div>
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyD87Tu6s1YGn9CVvlWZbBYmzS_HaLzUFdE",
-          authDomain: "premiumluxuriouswines.firebaseapp.com",
-          projectId: "premiumluxuriouswines",
-          storageBucket: "premiumluxuriouswines.appspot.com",
-          messagingSenderId: "857464953411",
-          appId: "1:857464953411:web:93762d4d7131c010bc12f6"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-
-        import {
-            getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField
-        }
-        from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
-
-        var fs = require("firebase-admin");
-        const db = fs.firestore();
-        const messageRef = db.collection('items').doc(id).collection('procurement');
-
-
-        //-- references --//
-        let ProcBox = document.getElementById("Procbox");
-        let insBtn = document.getElementById("Insbtn");
-
-        //-- adding documents --//
-        /*async function AddDocument_AutoID(){
-            var ref = collection(messageRef);
-
-            const docRef = await addDoc(
-                ref, {
-                    procurementTrans: ProcBox.value
-                }
-            )
-            .then(()=>{
-                alert("data added successfully");
-            })
-            .catch((error)=>{
-                console.log(error)
-                alert("unsuccesful operation, error:"+ error);
-            });
-        }*/
-        // -- assign events to buttons --//
-        insBtn.addEventListener("click", AddDocument_AutoID);
-
-      </script>
-
 
     <%- include('../partials/footer.ejs') %>
 
