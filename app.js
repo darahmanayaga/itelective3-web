@@ -3,7 +3,6 @@ var app = express();
 //  app.use(express.static('assets'));
 
 const port = process.env.PORT || 3000;
-app.set('port', port);
 
 app.use(express.json()); //NEEDED
 app.use(express.urlencoded()); //NEEDED
