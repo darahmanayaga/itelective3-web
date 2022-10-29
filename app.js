@@ -4,6 +4,9 @@ var app = express();
 
 const port = process.env.PORT || 3000;
 
+app.use(express.json()); //NEEDED
+app.use(express.urlencoded()); //NEEDED
+
 app.listen(port,);
 app.set('view engine', 'ejs');
 
@@ -50,10 +53,54 @@ app.get('/itempage/:itemid', async function (req, res) {
     } else {
         console.log('Document data:', doc.data());
     }
+    const db = fs.firestore();
+    const proc_item = await db.collection('items').doc(item_id).collection('procurement').get();
+
     // const items = await ingColl.get();
     let data = {
         url: req.url,
         itemData: doc.data(),
+        id: item_id,
+        //procId: proc_id,
+        procItem: proc_item,
+        fs: fs
+    }
+
+    res.render('itempage', data);
+});
+
+
+app.post('/itempage/:itemid', async function (req, res) {
+    try {
+        console.log(req.params.itemid);
+
+    } catch (e) {
+    }
+    const item_id = req.params.itemid;
+    const item_ref = itemColl.doc(item_id);
+    const doc = await item_ref.get();
+
+    if (!doc.exists) {
+        console.log('No such document!');
+    } else {
+        console.log('Document data:', doc.data());
+    }
+
+    console.log(req.body)
+    // const items = await ingColl.get();
+    var datainput = {
+        procurementTrans: Number(req.body.quantity),
+        dateCreated : new Date()
+    }
+
+    const db = fs.firestore();
+    const item_proc = db.collection('items').doc(item_id).collection('procurement').add(datainput);
+
+    let data = {
+        url: req.url,
+        itemData: doc.data(),
+        id: item_id,
+        fs:fs
     }
     res.render('itempage', data);
 });
