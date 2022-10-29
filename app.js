@@ -44,6 +44,7 @@ app.get('/itempage/:itemid', async function (req, res) {
 
     } catch (e) {
     }
+    const db = fs.firestore();
     const item_id = req.params.itemid;
     const item_ref = itemColl.doc(item_id);
     const doc = await item_ref.get();
@@ -53,16 +54,21 @@ app.get('/itempage/:itemid', async function (req, res) {
     } else {
         console.log('Document data:', doc.data());
     }
-    const db = fs.firestore();
-    const proc_item = await db.collection('items').doc(item_id).collection('procurement').get();
 
-    // const items = await ingColl.get();
+    const citiesRef = db.collection('items').doc(item_id).collection('procurement');
+    const snapshot = await citiesRef.get();
+    proc_array = []
+    snapshot.forEach(doc => {
+        console.log(doc.data());
+        proc_array.push(doc.data())
+    });
+
     let data = {
         url: req.url,
         itemData: doc.data(),
         id: item_id,
-        //procId: proc_id,
-        procItem: proc_item,
+        procid: doc.id,
+        proc_array: proc_array,
         fs: fs
     }
 

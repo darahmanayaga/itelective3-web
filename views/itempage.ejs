@@ -9,7 +9,7 @@
 <body style="background-color:#F5F2EA">
     
     <div class="p-10 grid grid-cols-2 sm:grid-cols-2 gap-2" style="margin-bottom:100px">        
-        <div class="w-full max-w-sm bg-white rounded-lg shadow-md xl" style="margin-top:50px;margin-left:250px">
+        <div class="w-full max-w-sm bg-white rounded-lg shadow-md xl" style="margin-top:50px;margin-left:150px">
             <a href="#">
                 <img class="p-8 rounded-t-lg" src="<%= itemData['imageURL'] %>" alt="product image" />
             </a>
@@ -37,48 +37,53 @@
             </div>
         </div>
 
-        <div class="overflow-x-auto relative">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <div class="overflow-x-auto relative" style="margin-top:50px;margin-right:150px">
+            <table class="w-full text-sm text-left text-gray-500" id="table">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="py-3 px-6">
-                            <p><%= procItem %></p>
+                            Date of Transaction
                         </th>
                         <th scope="col" class="py-3 px-6">
-                            Color
+                            Number of Procurement
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple MacBook Pro 17"
-                        </th>
-                        <td class="py-4 px-6">
-                            Sliver
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Microsoft Surface Pro
-                        </th>
-                        <td class="py-4 px-6">
-                            White
-                        </td>
-                    </tr>
-                    <tr class="bg-white dark:bg-gray-800">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Magic Mouse 2
-                        </th>
-                        <td class="py-4 px-6">
-                            Black
-                        </td>
-                    </tr>
+                    <% for(var index=0; index < proc_array.length; index++){ %>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <%= proc_array[index]['dateCreated'].toDate() %>
+                            </th>
+                            <td class="py-4 px-6">
+                                <%= proc_array[index]['procurementTrans'] %>
+                            </td>
+                        </tr>
+                    <% } %>
                 </tbody>
             </table>
+            <table class="w-full text-sm text-left text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="py-3 px-6">
+                            TOTAL
+                        </th>
+                        <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
+                            <span id="val"></span>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <script>
+                var table = document.getElementById("table"), sumVal = 0;
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+                }
+                document.getElementById("val").innerHTML = sumVal;
+                console.log(sumVal);
+            </script>
         </div>
-        
-    </div>
 
     <script type="module">
         // Import the functions you need from the SDKs you need
